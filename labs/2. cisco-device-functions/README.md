@@ -35,12 +35,11 @@ Before this lab, I knew switches forwarded traffic but didn't fully appreciate *
 When routers started pinging each other, the switches silently watched the traffic and built a table mapping each device's MAC address to the port it came from:
 
 SW1#show mac address-table dynamic
-Vlan    Mac Address         Type        Ports
-
-1       0090.2b82.ab01      DYNAMIC     Fa0/1    ← R1 is on port Fa0/1
-1       0060.2fb3.9152      DYNAMIC     Fa0/2    ← R2 is on port Fa0/2
-1       0001.9626.8970      DYNAMIC     Fa0/24   ← R3 is through SW2
-1       00d0.9701.02a9      DYNAMIC     Fa0/24   ← R4 is through SW2
+| Vlan | Mac Address | Type | Ports |
+| 1 | 0090.2b82.ab01 | DYNAMIC | Fa0/1    ← R1 is on port Fa0/1 |
+| 1 | 0060.2fb3.9152 | DYNAMIC | Fa0/2    ← R2 is on port Fa0/2 |
+| 1 | 0001.9626.8970 | DYNAMIC | Fa0/24   ← R3 is through SW2 |
+| 1 | 00d0.9701.02a9 | DYNAMIC | Fa0/24   ← R4 is through SW2 |
 
 R3 and R4 showing up on Fa0/24 makes sense — that's the uplink port connecting SW1 to SW2. SW1 can reach them but only through SW2.
 

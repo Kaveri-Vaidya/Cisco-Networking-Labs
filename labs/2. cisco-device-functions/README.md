@@ -1,6 +1,6 @@
 # Cisco Device Functions
 
-## The Expedition Log
+## What This Lab Is About
 First time actually seeing how switches and routers do their jobs at a hardware level — watching MAC address tables build themselves in real time and seeing how routers decide where to send traffic based on what's directly connected to them.
 
 ---

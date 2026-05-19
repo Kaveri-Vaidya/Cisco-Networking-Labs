@@ -36,6 +36,7 @@ When routers started pinging each other, the switches silently watched the traff
 
 SW1#show mac address-table dynamic
 | Vlan | Mac Address | Type | Ports |
+|----|------------------------|-----|----|
 | 1 | 0090.2b82.ab01 | DYNAMIC | Fa0/1    ← R1 is on port Fa0/1 |
 | 1 | 0060.2fb3.9152 | DYNAMIC | Fa0/2    ← R2 is on port Fa0/2 |
 | 1 | 0001.9626.8970 | DYNAMIC | Fa0/24   ← R3 is through SW2 |

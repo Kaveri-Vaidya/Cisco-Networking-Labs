@@ -10,7 +10,7 @@ Single router (Router0) in Packet Tracer. No complex topology here — the focus
 
 ---
 
-## What I Learned
+## Field Notes
 
 ### The Three Main Modes
 This was the biggest thing to wrap my head around at first:

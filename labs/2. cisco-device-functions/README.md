@@ -7,6 +7,7 @@ First time actually seeing how switches and routers do their jobs at a hardware 
 
 ## Topology
 Four routers (R1-R4) connected through two switches (SW1 and SW2). All routers preconfigured with IP addresses in the 10.10.10.0/24 network.
+
 10.10.10.2                    10.10.10.4
                        R2                              R4
                        |                               |

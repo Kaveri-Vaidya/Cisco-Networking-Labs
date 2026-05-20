@@ -9,10 +9,17 @@ concrete. Theory said ARP is link-local. Seeing R3 absent
 from R1's ARP cache after a successful ping to it was the 
 moment that actually landed.
 
+This is all about taking the theoritical knowledge of how DNS works and what ARP does to a practical level! It's about configuring routers to resolve 
+hostnames and then watching which MAC addresses appear in 
+which ARP caches. This made both concepts significantly more 
+concrete. Theory said ARP is link-local. Seeing R3 absent 
+from R1's ARP cache after a successful ping to it was the 
+moment that actually landed.
+
 ---
 
 ## Topology
-
+```
 [DNS-Server]
      10.10.10.10
           |
@@ -33,9 +40,10 @@ F0/0
 |
 10.10.20.1
 R3
+```
+Static routes between R1 and R3 was configured using staic routes [go to lab 4](...). The focus here will be DNS and ARP.
 
-Static routes between R1 and R3 were pre-configured so 
-connectivity already existed. The focus here was DNS and ARP.
+You can refer the [pkt](pkt file) to understand the DNS configuration.
 
 ---
 

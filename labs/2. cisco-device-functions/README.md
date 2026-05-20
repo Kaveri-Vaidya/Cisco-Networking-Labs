@@ -95,7 +95,7 @@ S    10.10.30.0/24    [1/0] via 10.10.10.2
 
 ---
 
-## Tools of The Expedition
+## Arsenal
 show ip interface brief               → quick status of all interfaces with IPs
 show interface gig0/0                 → detailed info including MAC address
 show mac address-table dynamic        → see what the switch has learned
@@ -108,7 +108,7 @@ ping [ip address]                     → test connectivity to a destination
 
 ---
 
-## Rough Terrain
+## Traps I Fell Into
 
 - R3 using GigabitEthernet0/1 instead of GigabitEthernet0/0 like everyone else was easy to miss — always verify with `show ip interface brief` rather than assuming.
 - Forgetting `no shutdown` after configuring an IP address on a router interface is apparently a classic trap. The IP gets configured successfully but nothing works because the interface is still down.
@@ -116,5 +116,5 @@ ping [ip address]                     → test connectivity to a destination
 
 ---
 
-## Next Destination
-[Lab 12 - The Life of a Packet](../12-life-of-a-packet/README.md)
+## Onwards TO
+[Life of a Packet](../life-of-a-packet/README.md)

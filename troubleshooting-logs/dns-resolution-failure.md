@@ -1,7 +1,7 @@
 # DNS Resolution Failure — Troubleshooting Log
 
 ## The Situation
-While configuring routers as DNS clients in my [lab 3](labs/3. life-of-a-packet) topology 
+While configuring routers as DNS clients in my [lab 3](3. life-of-a-packet) topology 
 (R1, R2, R3 with a DNS server at 10.10.10.10), I ran into a 
 situation where DNS simply wasn't resolving. I knew the theory 
 — routers need a name-server configured and domain-lookup 

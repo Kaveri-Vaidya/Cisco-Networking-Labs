@@ -122,8 +122,9 @@ own IP address — age doesn't apply to yourself.
 | R3 | 10.10.20.0/24 only | R2's far interface, itself |
 
 ---
-```text
+
 ## Tools of The Expedition
+```text
 ip domain-lookup              → enable DNS resolution on router
 ip name-server [ip]           → point router to a DNS server
 show arp                      → view the ARP cache

@@ -30,7 +30,7 @@ Four routers (R1-R4) connected through two switches (SW1 and SW2). All routers p
 
 ### How Switches Actually Learn — MAC Address Tables
 
-Before this lab, I knew switches forwarded traffic but didn't fully appreciate *how* they knew where to send it. Watching it happen live made it click.
+Before this lab, I knew switches forwarded traffic and *how* they knew where to send it. But watching it happen live made it more intuitive!
 
 When routers started pinging each other, the switches silently watched the traffic and built a table mapping each device's MAC address to the port it came from:
 

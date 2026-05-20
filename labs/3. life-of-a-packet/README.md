@@ -75,11 +75,13 @@ useful for catching misconfigurations immediately.
 
 After pinging across the topology I checked R1's ARP cache 
 expecting to see every device I had communicated with:
+```text
 R1#show arp
 Protocol  Address      Age  Hardware Addr    Type  Interface
 Internet  10.10.10.1   -    0090.0CD7.0D01   ARPA  FastEthernet0/0
 Internet  10.10.10.2   4    0004.9A96.A9A5   ARPA  FastEthernet0/0
 Internet  10.10.10.10  2    0090.21C6.D284   ARPA  FastEthernet0/0
+```
 
 R3 wasn't there — even though I had just successfully 
 pinged it. This is where the theory became real:
@@ -95,6 +97,7 @@ that is R2's problem.
 
 R2 sitting at the boundary of both networks showed 
 the full picture:
+```text
 R2#show arp
 Protocol  Address      Age  Hardware Addr    Type  Interface
 Internet  10.10.10.1   4    0090.0CD7.0D01   ARPA  FastEthernet0/0
@@ -102,6 +105,7 @@ Internet  10.10.10.2   -    0004.9A96.A9A5   ARPA  FastEthernet0/0
 Internet  10.10.10.10  1    0090.21C6.D284   ARPA  FastEthernet0/0
 Internet  10.10.20.1   4    0030.F2BA.30E7   ARPA  FastEthernet1/0
 Internet  10.10.20.2   -    0060.2FCA.ACA0   ARPA  FastEthernet1/0
+```
 R2 sees both networks entirely because it's directly 
 connected to both. R1 and R3 each only see their own 
 side of the network.
@@ -118,14 +122,14 @@ own IP address — age doesn't apply to yourself.
 | R3 | 10.10.20.0/24 only | R2's far interface, itself |
 
 ---
-
+```text
 ## Tools of The Expedition
 ip domain-lookup              → enable DNS resolution on router
 ip name-server [ip]           → point router to a DNS server
 show arp                      → view the ARP cache
 show ip interface brief       → verify interface status and IPs
 ping [hostname]               → test DNS resolution and connectivity
-
+```
 ---
 
 ## Rough Terrain

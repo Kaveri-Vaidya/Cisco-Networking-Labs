@@ -11,6 +11,7 @@ different story.
 ---
 
 ## Topology at the Time
+```
 [DNS-Server]
      10.10.10.10
           |
@@ -31,6 +32,7 @@ F0/0
 |
 10.10.20.1
 R3
+```
 ---
 
 ## What I Was Trying to Do

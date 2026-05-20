@@ -1,14 +1,6 @@
 # Life of a Packet
 
 ## The Expedition Log
-I already knew how DNS works conceptually and what ARP does 
-in theory — but actually configuring routers to resolve 
-hostnames and then watching which MAC addresses appear in 
-which ARP caches made both concepts significantly more 
-concrete. Theory said ARP is link-local. Seeing R3 absent 
-from R1's ARP cache after a successful ping to it was the 
-moment that actually landed.
-
 This is all about taking the theoritical knowledge of how DNS works and what ARP does to a practical level! It's about configuring routers to resolve 
 hostnames and then watching which MAC addresses appear in 
 which ARP caches. This made both concepts significantly more 

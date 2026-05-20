@@ -1,7 +1,7 @@
 # Life of a Packet
 
-## The Expedition Log
-This is all about taking the theoritical knowledge of how DNS works and what ARP does to a practical level! It's about configuring routers to resolve 
+## What this lab is about
+This lab is all about taking the theoritical knowledge of how DNS works and what ARP does to a practical level! It's about configuring routers to resolve 
 hostnames and then watching which MAC addresses appear in 
 which ARP caches. This made both concepts significantly more 
 concrete. Theory said ARP is link-local. Seeing R3 absent 
@@ -123,7 +123,7 @@ own IP address — age doesn't apply to yourself.
 
 ---
 
-## Tools of The Expedition
+## Arsenal
 ```text
 ip domain-lookup              → enable DNS resolution on router
 ip name-server [ip]           → point router to a DNS server
@@ -133,7 +133,7 @@ ping [hostname]               → test DNS resolution and connectivity
 ```
 ---
 
-## Rough Terrain
+## Traps I Fell Into
 
 - Made a couple of DNS configuration mistakes during this lab 
   that taught me more than the working configuration did. 
@@ -147,5 +147,5 @@ ping [hostname]               → test DNS resolution and connectivity
 
 ---
 
-## Next Destination
+## Onwards To
 [Routing Fundamentals](../16-routing-fundamentals/README.md)

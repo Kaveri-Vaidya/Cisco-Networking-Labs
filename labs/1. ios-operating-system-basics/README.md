@@ -126,4 +126,4 @@ interface gigabitEthernet 0/0   → enter interface config mode
 ---
 
 ## Onwards To
-[Lab 2 - Cisco Device Functions](../cisco-device-functions/README.md)
+[Cisco Device Functions](../2.%20cisco-device-functions)

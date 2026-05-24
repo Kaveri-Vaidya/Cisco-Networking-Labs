@@ -1,8 +1,8 @@
 # Cisco Device Functions
 
 ## What This Lab Is About
-
 This lab makes the theoritical knowledge of how switches and routers do their jobs at a hardware level — how MAC address tables build themselves in real time and how routers decide where to send traffic — more intuitve.
+
 ---
 
 ## Topology

@@ -1,8 +1,7 @@
 # Cisco Device Functions
 
 ## What This Lab Is About
-First time actually seeing how switches and routers do their jobs at a hardware level — watching MAC address tables build themselves in real time and seeing how routers decide where to send traffic based on what's directly connected to them.
-
+This lab makes the theoritical knowledge of how switches and routers do their jobs at a hardware level — how MAC address tables build themselves in real time and how routers decide where to send traffic — more intuitve.
 ---
 
 ## Topology
@@ -29,8 +28,6 @@ Four routers (R1-R4) connected through two switches (SW1 and SW2). All routers p
 ## Field Notes
 
 ### How Switches Actually Learn — MAC Address Tables
-
-Before this lab, I knew switches forwarded traffic and *how* they knew where to send it. But watching it happen live made it more intuitive!
 
 When routers started pinging each other, the switches silently watched the traffic and built a table mapping each device's MAC address to the port it came from:
 
@@ -84,18 +81,20 @@ The router now knew about both networks and could route between them.
 ### Adding a Static Route
 
 Told R1 how to reach a network it wasn't directly connected to:
+```
 R1(config)#ip route 10.10.30.0 255.255.255.0 10.10.10.2
 
 R1(config)#ip route 10.10.30.0 255.255.255.0 10.10.10.2
-
+```
 This says: *"To reach 10.10.30.0/24, send traffic to 10.10.10.2 and let that router figure out the rest."*
 
 It showed up in the routing table marked with **S** for Static:
-S    10.10.30.0/24    [1/0] via 10.10.10.2
+```S    10.10.30.0/24    [1/0] via 10.10.10.2```
 
 ---
 
 ## Arsenal
+```
 show ip interface brief               → quick status of all interfaces with IPs
 show interface gig0/0                 → detailed info including MAC address
 show mac address-table dynamic        → see what the switch has learned
@@ -105,7 +104,7 @@ ip address [ip] [subnet mask]         → assign IP to an interface
 no shutdown                           → bring a router interface online
 ip route [network] [mask] [next-hop]  → add a static route manually
 ping [ip address]                     → test connectivity to a destination
-
+```
 ---
 
 ## Traps I Fell Into

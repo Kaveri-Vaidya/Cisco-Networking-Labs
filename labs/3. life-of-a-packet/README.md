@@ -33,9 +33,9 @@ F0/0
 10.10.20.1
 R3
 ```
-Static routes between R1 and R3 was configured using staic routes [go to lab 4](...). The focus here will be DNS and ARP.
+Static routes between R1 and R3 was configured using staic routes [demonstrated in lab 2](../2.%20cisco-device-functions). The focus here will be DNS and ARP.
 
-You can refer the [pkt](pkt file) to understand the DNS configuration.
+You can refer the .pkt file to understand the DNS configuration.
 
 ---
 

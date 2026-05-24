@@ -13,7 +13,6 @@ Single router (Router0) in Packet Tracer. No complex topology here — the focus
 ## Field Notes
 
 ### The Three Main Modes
-This was the biggest thing to wrap my head around at first:
 
 | Mode | Prompt | What you can do here |
 |------|--------|----------------------|
@@ -77,8 +76,6 @@ When you see `--More--` at the bottom:
 
 ## Configuration Management — The Important Bit
 
-This took me a moment to fully understand:
-
 | Config | Where it lives | What happens to it |
 |--------|---------------|-------------------|
 | Running config | RAM | Lost on reboot |
@@ -97,6 +94,7 @@ RouterX#copy run tftp        → saves to external TFTP server (proper way)
 ---
 
 ## Arsenal
+```
 enable                          → enter Privileged Exec mode
 disable                         → drop back to User Exec
 configure terminal              → enter Global Config mode
@@ -109,7 +107,7 @@ show startup-config             → view saved config
 copy run start                  → save running config to startup
 show ip interface brief         → quick view of all interfaces and status
 interface gigabitEthernet 0/0   → enter interface config mode
-
+```
 ---
 
 ## Traps I Fell Into

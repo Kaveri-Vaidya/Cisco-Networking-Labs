@@ -117,4 +117,4 @@ ping [ip address]                     → test connectivity to a destination
 ---
 
 ## Onwards TO
-[Life of a Packet](../life-of-a-packet)
+[Life of a Packet](../3.%20life-of-a-packet)

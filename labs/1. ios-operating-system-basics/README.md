@@ -85,9 +85,10 @@ When you see `--More--` at the bottom:
 | Running config | RAM | Lost on reboot |
 | Startup config | NVRAM | Survives reboot |
 
-So any change you make takes effect **immediately** but is **not saved** until you explicitly copy it:
-
+Any change you make on the running config takes effect **immediately** but is **not saved** until you explicitly copy it:
+```
 R1#copy run start
+```
 Verified this by changing hostname to RouterX, checking startup config 
 still showed the old hostname R1, then saving and confirming it updated.
 

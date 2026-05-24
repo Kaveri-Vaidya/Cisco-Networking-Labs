@@ -58,13 +58,17 @@ R1(config-if)#do show ip interface brief. Works from any level. I use this const
 
 ### Pipe Commands (Filtering Output)
 When `show run` dumps a wall of text, these help a lot:
+```
 R1#show run | begin hostname      → output starts from the word 'hostname'
 R1#show run | include interface   → shows only lines containing 'interface'
 R1#show run | exclude interface   → shows everything except 'interface' lines
+```
 Important gotcha — pipe commands ARE case sensitive even though 
 everything else in IOS is not:
+```
 R1#sh run | begin Hostname        → returns nothing (capital H)
 R1#sh run | begin hostname        → works correctly
+```
 
 ### Paging Through Long Output
 When you see `--More--` at the bottom:
@@ -88,9 +92,10 @@ Verified this by changing hostname to RouterX, checking startup config
 still showed the old hostname R1, then saving and confirming it updated.
 
 **Backing up config:**
+```
 RouterX#copy run flash:      → saves to router's own flash (not ideal)
 RouterX#copy run tftp        → saves to external TFTP server (proper way)
-
+```
 ---
 
 ## Arsenal

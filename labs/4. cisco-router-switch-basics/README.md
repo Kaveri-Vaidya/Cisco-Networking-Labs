@@ -29,11 +29,11 @@ addresses on physical interfaces — they get them on a virtual
 interface called Vlan1. This is purely for management access 
 (SSH, Telnet) — the switch doesn't need an IP to forward 
 traffic, that happens at Layer 2 regardless.
-
+```
 SW1(config)#interface vlan1
 SW1(config-if)#ip address 10.10.10.10 255.255.255.0
 SW1(config-if)#no shutdown
-
+```
 ### Default Gateway on a Switch
 
 Since the switch now has a management IP it also needs to know 
@@ -41,9 +41,9 @@ how to reach other subnets — otherwise you can only manage it
 from devices on the same network. Switches don't run routing 
 so instead of a routing table they just need a single default 
 gateway:
-
+```
 SW1(config)#ip default-gateway 10.10.10.2
-
+```
 This is different from how routers handle it — routers use 
 routing tables, switches use this single command.
 
@@ -52,8 +52,10 @@ routing tables, switches use this single command.
 Simple but genuinely useful in real networks — labeling 
 interfaces so anyone looking at the config knows immediately 
 what's connected where:
+```
 R1(config-if)#description Link to SW1
 SW1(config-if)#description Link to R1
+```
 
 Shows up in `show interface` output and makes troubleshooting 
 significantly faster when you're staring at a device with 
@@ -66,6 +68,7 @@ information about directly connected neighbors. One command
 reveals everything attached:
 SW1#show cdp neighbors
 |Device ID|    Local Intrfce|    Holdtme|    Capability|    Platform|    Port ID|
+|-----|---|-----|---|-----|---|
 |R1           |Fas 0/1          |170        |R             |C2800       |Fas 0/0|
 |R2           |Fas 0/2          |134        |R             |C2800       |Fas 0/0|
 
@@ -75,16 +78,18 @@ their end. All of this without any manual configuration —
 CDP does it automatically.
 
 **Disabling CDP on a specific interface:**
+```
 SW1(config)#interface FastEthernet 0/1
 SW1(config-if)#no cdp enable
+```
 
 This stops CDP advertisements going out that specific port — 
 R1 can no longer discover SW1. To flush R1's cached CDP 
 information immediately:
-
+```
 R1(config)#no cdp run
 R1(config)#cdp run
-
+```
 CDP disabled per interface is useful in security contexts — 
 you don't want to advertise device information to untrusted 
 parts of the network.
@@ -93,22 +98,24 @@ parts of the network.
 
 By default interfaces negotiate speed and duplex 
 automatically. Verified on the link to R1:
+```
 SW1#show interface f0/1
 Full-duplex, 100Mb/s
-
+```
 Auto negotiation worked perfectly — both sides agreed on 
 100Mbps full duplex without any configuration.
 
 Manually configured the link to R2 to match:
+```
 SW1(config-if)#speed 100
 SW1(config-if)#duplex full
-
+```
 When manually configuring speed and duplex — both sides 
 must match. Configured R2 to match as well:
-
+```
 R2(config-if)#speed 100
 R2(config-if)#duplex full
-
+```
 What happens when they don't match is documented separately 
 in the troubleshooting logs →
 [Speed and Duplex Mismatch](../../troubleshooting-logs/speed-duplex-mismatch.md)

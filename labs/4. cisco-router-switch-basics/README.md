@@ -6,7 +6,7 @@ interface descriptions. Then it goes deeper into something I
 found genuinely interesting: what actually happens at the 
 physical layer when speed and duplex settings don't agree. 
 CDP also made an appearance — Cisco's built-in neighbor 
-discovery protocol that I hadn't touched before.
+discovery protocol that I hadn't touched before. Enabled by default but the cases where it needs to be manually disabled.
 
 ---
 <img width="680" height="205" alt="Screenshot 2026-05-28 102424" src="https://github.com/user-attachments/assets/671b3314-2880-4624-9a8d-82a36d82fc17" />
@@ -45,8 +45,7 @@ gateway:
 SW1(config)#ip default-gateway 10.10.10.2
 
 This is different from how routers handle it — routers use 
-routing tables, switches use this single command. Worth 
-remembering.
+routing tables, switches use this single command.
 
 ### Interface Descriptions
 
@@ -66,9 +65,9 @@ CDP runs automatically on Cisco devices and advertises
 information about directly connected neighbors. One command 
 reveals everything attached:
 SW1#show cdp neighbors
-Device ID    Local Intrfce    Holdtme    Capability    Platform    Port ID
-R1           Fas 0/1          170        R             C2800       Fas 0/0
-R2           Fas 0/2          134        R             C2800       Fas 0/0
+|Device ID|    Local Intrfce|    Holdtme|    Capability|    Platform|    Port ID|
+|R1           |Fas 0/1          |170        |R             |C2800       |Fas 0/0|
+|R2           |Fas 0/2          |134        |R             |C2800       |Fas 0/0|
 
 SW1 can see both routers, which interfaces they're connected 
 to, what platform they are and what port they're using on 

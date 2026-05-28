@@ -1,5 +1,3 @@
-# Speed and Duplex Mismatch — Troubleshooting Log
-
 ## What I Was Experimenting With
 
 After manually configuring speed and duplex on the SW1-R2 

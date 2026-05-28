@@ -9,7 +9,7 @@ CDP also made an appearance — Cisco's built-in neighbor
 discovery protocol that I hadn't touched before. Enabled by default but the cases where it needs to be manually disabled.
 
 ---
-<img width="680" height="205" alt="Screenshot 2026-05-28 102424" src="https://github.com/user-attachments/assets/671b3314-2880-4624-9a8d-82a36d82fc17" />
+<img width="683" height="217" alt="Screenshot 2026-05-28 105854" src="https://github.com/user-attachments/assets/31a8c419-ec29-4e15-9ccb-1ef2ffa2c2dd" />
 
 ---
 

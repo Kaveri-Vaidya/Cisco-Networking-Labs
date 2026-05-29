@@ -22,7 +22,7 @@ makes everything else recoverable:
 ```
 R1#copy running-config tftp
 Address or name of remote host []? 10.10.10.10
-Destination filename [R1-confg]? R1-backup
+Destination filename [R1-confg]? R1-running-config
 ```
 Verified it landed on the tftp server:
 

@@ -260,4 +260,4 @@ ping [ip]                                  → test connectivity
 ---
 
 ## Onwards To
-[Dynamic Routing Protocols](../dynamic-routing-protocols/README.md)
+[Dynamic Routing Protocols](../7.%20dynamic-routing-protocols/README.md)
